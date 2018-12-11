@@ -58,22 +58,22 @@
                                 <items>
                                     <barButtonItem style="plain" id="pN7-Bi-El7">
                                         <textField key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Take a note..." textAlignment="natural" minimumFontSize="17" id="ZXm-Uj-h4Q">
-                                            <rect key="frame" x="16" y="25" width="216" height="30"/>
+                                            <rect key="frame" x="16" y="25" width="184" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </barButtonItem>
-                                    <barButtonItem systemItem="trash" id="We0-qq-QWJ">
+                                    <barButtonItem image="icons8-list-30" id="We0-qq-QWJ">
                                         <inset key="imageInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </barButtonItem>
-                                    <barButtonItem systemItem="action" id="3Zp-9Z-PYi">
+                                    <barButtonItem image="icons8-ball-point-pen-filled-30 (1)" id="3Zp-9Z-PYi">
                                         <inset key="imageInsets" minX="5" minY="3" maxX="5" maxY="10"/>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </barButtonItem>
-                                    <barButtonItem systemItem="compose" id="fd9-v1-Yl6">
+                                    <barButtonItem image="icons8-microphone-30" id="fd9-v1-Yl6">
                                         <inset key="imageInsets" minX="5" minY="5" maxX="10" maxY="5"/>
                                         <inset key="landscapeImageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
@@ -127,30 +127,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8R7-2G-D27">
-                                <rect key="frame" x="16" y="63" width="343" height="30"/>
+                                <rect key="frame" x="16" y="87" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hsD-VG-avt">
-                                <rect key="frame" x="16" y="122" width="343" height="128"/>
+                                <rect key="frame" x="16" y="132" width="343" height="463"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFK-0p-cDu">
+                                <rect key="frame" x="0.0" y="595" width="375" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTA-hY-tVb">
+                                        <rect key="frame" x="14" y="9" width="30" height="30"/>
+                                        <state key="normal" image="icons8-add-new-30"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kT-Nu-fW2">
+                                        <rect key="frame" x="332" y="9" width="30" height="30"/>
+                                        <state key="normal" image="icons8-view-more-30"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="eTA-hY-tVb" firstAttribute="leading" secondItem="qFK-0p-cDu" secondAttribute="leading" constant="14" id="1ry-b1-jS3"/>
+                                    <constraint firstAttribute="trailing" secondItem="3kT-Nu-fW2" secondAttribute="trailing" constant="13" id="8pK-q7-gCt"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8oN-9V-ayF" firstAttribute="bottom" secondItem="hsD-VG-avt" secondAttribute="bottom" constant="417" id="0Ri-q1-9S0"/>
+                            <constraint firstItem="8oN-9V-ayF" firstAttribute="bottom" secondItem="hsD-VG-avt" secondAttribute="bottom" constant="72" id="0Ri-q1-9S0"/>
                             <constraint firstItem="8R7-2G-D27" firstAttribute="leading" secondItem="8oN-9V-ayF" secondAttribute="leading" constant="16" id="1hN-K2-iwH"/>
-                            <constraint firstItem="hsD-VG-avt" firstAttribute="top" secondItem="8R7-2G-D27" secondAttribute="bottom" constant="29" id="6MJ-XO-JlV"/>
+                            <constraint firstItem="hsD-VG-avt" firstAttribute="top" secondItem="8R7-2G-D27" secondAttribute="bottom" constant="15" id="6MJ-XO-JlV"/>
                             <constraint firstItem="8oN-9V-ayF" firstAttribute="trailing" secondItem="hsD-VG-avt" secondAttribute="trailing" constant="16" id="9PC-OE-QU6"/>
                             <constraint firstItem="8oN-9V-ayF" firstAttribute="trailing" secondItem="8R7-2G-D27" secondAttribute="trailing" constant="16" id="CcT-ZI-4HN"/>
+                            <constraint firstItem="qFK-0p-cDu" firstAttribute="top" secondItem="hsD-VG-avt" secondAttribute="bottom" id="EH8-8w-pOQ"/>
+                            <constraint firstItem="3kT-Nu-fW2" firstAttribute="top" secondItem="hsD-VG-avt" secondAttribute="bottom" constant="9" id="HTg-ai-czv"/>
+                            <constraint firstItem="8oN-9V-ayF" firstAttribute="trailing" secondItem="qFK-0p-cDu" secondAttribute="trailing" id="Vsh-K0-pXV"/>
                             <constraint firstItem="hsD-VG-avt" firstAttribute="leading" secondItem="8oN-9V-ayF" secondAttribute="leading" constant="16" id="YnW-Fy-Ajn"/>
-                            <constraint firstItem="8R7-2G-D27" firstAttribute="top" secondItem="8oN-9V-ayF" secondAttribute="top" constant="43" id="lh9-1g-95u"/>
+                            <constraint firstItem="8oN-9V-ayF" firstAttribute="bottom" secondItem="qFK-0p-cDu" secondAttribute="bottom" id="Zh9-YK-O2Y"/>
+                            <constraint firstItem="eTA-hY-tVb" firstAttribute="top" secondItem="hsD-VG-avt" secondAttribute="bottom" constant="9" id="e8N-zF-CpO"/>
+                            <constraint firstItem="8R7-2G-D27" firstAttribute="top" secondItem="8oN-9V-ayF" secondAttribute="top" constant="23" id="lh9-1g-95u"/>
+                            <constraint firstItem="qFK-0p-cDu" firstAttribute="leading" secondItem="8oN-9V-ayF" secondAttribute="leading" id="xLm-9z-JGh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8oN-9V-ayF"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CG8-Ie-cTo">
+                        <rightBarButtonItems>
+                            <barButtonItem image="icons8-save-30" id="gIs-ZZ-R1q">
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem image="icons8-hand-cursor-30" id="tBT-jb-ooc">
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem image="icons8-push-pin-30" id="4SQ-Pt-oLL">
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionTexView" destination="hsD-VG-avt" id="ebu-e9-Qbd"/>
                         <outlet property="titleTextField" destination="8R7-2G-D27" id="Nt1-jn-mpf"/>
@@ -158,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3XO-LB-dQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1126" y="1419"/>
+            <point key="canvasLocation" x="2064.8000000000002" y="1418.1409295352325"/>
         </scene>
         <!--Edit Note Controller-->
         <scene sceneID="Wfa-XA-sOP">
@@ -220,5 +257,33 @@
             </objects>
             <point key="canvasLocation" x="309.60000000000002" y="686.80659670164926"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FiD-S5-ILT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qsx-y5-gvP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hCS-p6-yAN">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TTx-5G-c9f" kind="relationship" relationship="rootViewController" id="Sj4-b7-iai"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIv-ro-TX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1125.5999999999999" y="1418.1409295352325"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="icons8-add-new-30" width="30" height="30"/>
+        <image name="icons8-ball-point-pen-filled-30 (1)" width="30" height="30"/>
+        <image name="icons8-hand-cursor-30" width="30" height="30"/>
+        <image name="icons8-list-30" width="30" height="30"/>
+        <image name="icons8-microphone-30" width="30" height="30"/>
+        <image name="icons8-push-pin-30" width="30" height="30"/>
+        <image name="icons8-save-30" width="30" height="30"/>
+        <image name="icons8-view-more-30" width="30" height="30"/>
+    </resources>
 </document>

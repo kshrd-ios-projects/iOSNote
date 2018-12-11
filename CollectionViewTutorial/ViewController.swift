@@ -42,6 +42,8 @@ class ViewController: UIViewController {
     
     private func initNavigator() {
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.tintColor = .gray
+        navigationController?.navigationBar.barTintColor = .white
         navigationItem.title = "Notes"
         navigationItem.largeTitleDisplayMode = .automatic
         navigationController?.navigationBar.barTintColor = .yellow
