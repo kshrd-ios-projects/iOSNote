@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Note-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionViewTutorial" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,8 +81,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Zeo-QK-9xn"/>
+                    <navigationItem key="navigationItem" title="Note" id="Zeo-QK-9xn">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="compose" id="Ecb-ZT-GuW"/>
+                            <barButtonItem systemItem="search" id="VC6-IZ-Ms4"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
+                        <outlet property="bottomToolBar" destination="THo-ZS-EZj" id="dIm-gj-pqZ"/>
                         <outlet property="collectionView" destination="ZVG-oA-2mM" id="NKo-Bj-0RT"/>
                         <outlet property="takeNoteTextField" destination="ZXm-Uj-h4Q" id="QX3-LV-CHH"/>
                         <segue destination="e6d-9w-jDv" kind="show" identifier="goToDetail" id="JQI-yB-9qX"/>
@@ -101,13 +107,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8R7-2G-D27">
-                                <rect key="frame" x="16" y="98" width="343" height="30"/>
+                                <rect key="frame" x="16" y="63" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hsD-VG-avt">
-                                <rect key="frame" x="16" y="142" width="343" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hsD-VG-avt">
+                                <rect key="frame" x="16" y="122" width="343" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -115,13 +121,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8oN-9V-ayF" firstAttribute="bottom" secondItem="hsD-VG-avt" secondAttribute="bottom" constant="397" id="0Ri-q1-9S0"/>
+                            <constraint firstItem="8oN-9V-ayF" firstAttribute="bottom" secondItem="hsD-VG-avt" secondAttribute="bottom" constant="417" id="0Ri-q1-9S0"/>
                             <constraint firstItem="8R7-2G-D27" firstAttribute="leading" secondItem="8oN-9V-ayF" secondAttribute="leading" constant="16" id="1hN-K2-iwH"/>
-                            <constraint firstItem="hsD-VG-avt" firstAttribute="top" secondItem="8R7-2G-D27" secondAttribute="bottom" constant="14" id="6MJ-XO-JlV"/>
+                            <constraint firstItem="hsD-VG-avt" firstAttribute="top" secondItem="8R7-2G-D27" secondAttribute="bottom" constant="29" id="6MJ-XO-JlV"/>
                             <constraint firstItem="8oN-9V-ayF" firstAttribute="trailing" secondItem="hsD-VG-avt" secondAttribute="trailing" constant="16" id="9PC-OE-QU6"/>
                             <constraint firstItem="8oN-9V-ayF" firstAttribute="trailing" secondItem="8R7-2G-D27" secondAttribute="trailing" constant="16" id="CcT-ZI-4HN"/>
                             <constraint firstItem="hsD-VG-avt" firstAttribute="leading" secondItem="8oN-9V-ayF" secondAttribute="leading" constant="16" id="YnW-Fy-Ajn"/>
-                            <constraint firstItem="8R7-2G-D27" firstAttribute="top" secondItem="8oN-9V-ayF" secondAttribute="top" constant="78" id="lh9-1g-95u"/>
+                            <constraint firstItem="8R7-2G-D27" firstAttribute="top" secondItem="8oN-9V-ayF" secondAttribute="top" constant="43" id="lh9-1g-95u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8oN-9V-ayF"/>
                     </view>
@@ -151,7 +157,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qsi-FG-vDu">
                                 <rect key="frame" x="16" y="123" width="343" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

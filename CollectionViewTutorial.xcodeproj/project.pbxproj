@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D32CD97F21BD05CB00D6CC29 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32CD97E21BD05CB00D6CC29 /* Note.swift */; };
 		D32CD98221BD0A0900D6CC29 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32CD98021BD0A0900D6CC29 /* CustomCollectionViewCell.swift */; };
 		D32CD98321BD0A0900D6CC29 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32CD98121BD0A0900D6CC29 /* CustomCollectionViewCell.xib */; };
 		D32CD98621BD15F800D6CC29 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D32CD98421BD15F800D6CC29 /* Model.xcdatamodeld */; };
 		D32CD98821BF8ED700D6CC29 /* CreateNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32CD98721BF8ED700D6CC29 /* CreateNoteController.swift */; };
+		D32CD98A21C00D6A00D6CC29 /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32CD98921C00D6900D6CC29 /* ColumnFlowLayout.swift */; };
 		D3EBEAE021BC00B700B13539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EBEADF21BC00B700B13539 /* AppDelegate.swift */; };
 		D3EBEAE221BC00B700B13539 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EBEAE121BC00B700B13539 /* ViewController.swift */; };
 		D3EBEAE521BC00B700B13539 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3EBEAE321BC00B700B13539 /* Main.storyboard */; };
@@ -21,11 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D32CD97E21BD05CB00D6CC29 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D32CD98021BD0A0900D6CC29 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		D32CD98121BD0A0900D6CC29 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		D32CD98521BD15F800D6CC29 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D32CD98721BF8ED700D6CC29 /* CreateNoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteController.swift; sourceTree = "<group>"; };
+		D32CD98921C00D6900D6CC29 /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
 		D3EBEADC21BC00B700B13539 /* CollectionViewTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EBEADF21BC00B700B13539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3EBEAE121BC00B700B13539 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,14 +56,6 @@
 			path = CustomCells;
 			sourceTree = "<group>";
 		};
-		D32CD97D21BD05A600D6CC29 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D32CD97E21BD05CB00D6CC29 /* Note.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		D3EBEAD321BC00B600B13539 = {
 			isa = PBXGroup;
 			children = (
@@ -91,9 +83,9 @@
 				D3EBEAE621BC00BB00B13539 /* Assets.xcassets */,
 				D3EBEAE821BC00BB00B13539 /* LaunchScreen.storyboard */,
 				D3EBEAEB21BC00BB00B13539 /* Info.plist */,
-				D32CD97D21BD05A600D6CC29 /* Models */,
 				D32CD97C21BD057B00D6CC29 /* CustomCells */,
 				D32CD98421BD15F800D6CC29 /* Model.xcdatamodeld */,
+				D32CD98921C00D6900D6CC29 /* ColumnFlowLayout.swift */,
 			);
 			path = CollectionViewTutorial;
 			sourceTree = "<group>";
@@ -170,8 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D32CD97F21BD05CB00D6CC29 /* Note.swift in Sources */,
 				D32CD98221BD0A0900D6CC29 /* CustomCollectionViewCell.swift in Sources */,
+				D32CD98A21C00D6A00D6CC29 /* ColumnFlowLayout.swift in Sources */,
 				D3EBEAE221BC00B700B13539 /* ViewController.swift in Sources */,
 				D3EBEAF421BCB9D200B13539 /* EditNoteController.swift in Sources */,
 				D3EBEAE021BC00B700B13539 /* AppDelegate.swift in Sources */,
@@ -323,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQF3KN6FJC;
 				INFOPLIST_FILE = CollectionViewTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,6 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQF3KN6FJC;
 				INFOPLIST_FILE = CollectionViewTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

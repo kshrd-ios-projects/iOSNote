@@ -16,11 +16,16 @@ class CreateNoteController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        descriptionTexView.delegate = self
+        descriptionTexView.text = "Description..."
+        descriptionTexView.textColor = UIColor.lightGray
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        print("\(titleTextField.text!)")
+        if titleTextField.text == "" {
+            return print("Title is empty!")
+        }
         saveNote()
     }
     
@@ -43,7 +48,20 @@ class CreateNoteController: UIViewController {
         }
         
     }
-    
-    
+}
 
+extension CreateNoteController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Description..."
+            textView.textColor = UIColor.lightGray
+        }
+    }
 }

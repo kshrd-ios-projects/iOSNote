@@ -12,25 +12,46 @@ import CoreData
 class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var takeNoteTextField: UITextField!
+    @IBOutlet weak var bottomToolBar: UIToolbar!
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     lazy var manageContext = appDelegate.persistentContainer.viewContext
     
     let reuseIdentifier = "CustomCollectionViewCell"
     var notes = [NSManagedObject]()
     var valueToPass = NSManagedObject()
+    
+    private func setupCell() {
+        let columnLayout = ColumnFlowLayout(
+            cellsPerRow: 2,
+            minimumInteritemSpacing: 10,
+            minimumLineSpacing: 10,
+            sectionInset: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        )
+
+        collectionView.collectionViewLayout = columnLayout
+        collectionView.contentInsetAdjustmentBehavior = .always
+        collectionView.register(UINib.init(nibName: reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        
+    }
+    
+    private func addGuestures() {
+        takeNoteTextField.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(createNote)))
+        
+        collectionView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress)))
+    }
+    
+    private func initNavigator() {
+        navigationItem.title = "Notes"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.barTintColor = .yellow
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Notes"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.barTintColor = .yellow
-        
-        collectionView.register(UINib.init(nibName: reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
-        
-        takeNoteTextField.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(createNote)))
-        
-        collectionView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress)))
+        initNavigator()
+        setupCell()
+        addGuestures()
 
     }
     
