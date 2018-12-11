@@ -53,22 +53,38 @@
                                 </connections>
                             </collectionView>
                             <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THo-ZS-EZj">
-                                <rect key="frame" x="0.0" y="625" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="590" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" id="pN7-Bi-El7">
                                         <textField key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Take a note..." textAlignment="natural" minimumFontSize="17" id="ZXm-Uj-h4Q">
-                                            <rect key="frame" x="16" y="7" width="226" height="30"/>
+                                            <rect key="frame" x="16" y="25" width="216" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </barButtonItem>
-                                    <barButtonItem systemItem="add" id="We0-qq-QWJ"/>
-                                    <barButtonItem systemItem="action" id="3Zp-9Z-PYi"/>
-                                    <barButtonItem systemItem="compose" id="fd9-v1-Yl6"/>
-                                    <barButtonItem systemItem="camera" id="1f5-7c-Azk"/>
+                                    <barButtonItem systemItem="trash" id="We0-qq-QWJ">
+                                        <inset key="imageInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="action" id="3Zp-9Z-PYi">
+                                        <inset key="imageInsets" minX="5" minY="3" maxX="5" maxY="10"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="compose" id="fd9-v1-Yl6">
+                                        <inset key="imageInsets" minX="5" minY="5" maxX="10" maxY="5"/>
+                                        <inset key="landscapeImageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="camera" id="1f5-7c-Azk">
+                                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <inset key="landscapeImageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="55"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -83,8 +99,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Note" id="Zeo-QK-9xn">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="compose" id="Ecb-ZT-GuW"/>
-                            <barButtonItem systemItem="search" id="VC6-IZ-Ms4"/>
+                            <barButtonItem systemItem="compose" id="Ecb-ZT-GuW">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="VC6-IZ-Ms4">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>

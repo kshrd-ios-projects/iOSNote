@@ -41,9 +41,13 @@ class ViewController: UIViewController {
     }
     
     private func initNavigator() {
-        navigationItem.title = "Notes"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Notes"
+        navigationItem.largeTitleDisplayMode = .automatic
         navigationController?.navigationBar.barTintColor = .yellow
+        
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
 
     override func viewDidLoad() {
