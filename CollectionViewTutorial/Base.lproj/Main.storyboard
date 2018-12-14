@@ -52,13 +52,12 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="nQg-HK-hYN"/>
                                 </connections>
                             </collectionView>
-                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THo-ZS-EZj">
-                                <rect key="frame" x="0.0" y="590" width="375" height="80"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="THo-ZS-EZj">
+                                <rect key="frame" x="0.0" y="590" width="375" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" id="pN7-Bi-El7">
                                         <textField key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Take a note..." textAlignment="natural" minimumFontSize="17" id="ZXm-Uj-h4Q">
-                                            <rect key="frame" x="16" y="25" width="184" height="30"/>
+                                            <rect key="frame" x="16" y="7" width="184" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -90,9 +89,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="THo-ZS-EZj" firstAttribute="top" secondItem="ZVG-oA-2mM" secondAttribute="bottom" constant="-77" id="Dou-pO-QBX"/>
                             <constraint firstItem="ZVG-oA-2mM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N8k-XC-xcM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZVG-oA-2mM" secondAttribute="trailing" id="Plf-kJ-XWg"/>
+                            <constraint firstItem="THo-ZS-EZj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U80-wO-KdV"/>
                             <constraint firstItem="ZVG-oA-2mM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZBO-sN-Zub"/>
+                            <constraint firstItem="THo-ZS-EZj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cz6-b2-LAC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZVG-oA-2mM" secondAttribute="bottom" id="uvk-j5-Zwq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
